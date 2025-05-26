@@ -15,6 +15,7 @@ class Setup:
     def _run(self):
         # Chuyển đến trang extension
         self.node.go_to(f'{EXTENSION_URL}/home.html', method="get")
+        self.node.new_tab('https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn')
 
 class Auto:
     def __init__(self, node: Node, profile: dict) -> None:
@@ -236,6 +237,7 @@ class Auto:
                 return False
 
     def _run(self):
+
         # Chuyển đến trang extension
         self.node.go_to(f'{EXTENSION_URL}/home.html', method="get")
         
